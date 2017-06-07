@@ -3,7 +3,7 @@
 	<title>CRUD</title>
 </head>
 <body>
-	<h1>hhhh</h1>
+	<h1>Formulario</h1>
 <?php
 //	$dbcon = pg_connect("host=localhost dbname=rud user=phpApache password=phpApache123") or die('No se pudo conectar').pg_last_error
 
@@ -48,7 +48,7 @@ pg_free_result($result);
 pg_close($dbconn);
 
 ?>
-<form action="crud.php" method="post">
+<form action="index.php" method="post">
 
 <table width="400" border="0" cellspacing="0" cellpadding="0" align="center">
 
@@ -107,7 +107,45 @@ pg_close($dbconn);
 </table>
 
 </form>
-</body>
 
+
+
+<form action="modificar.php" method="post">
+
+<table width="400" border="0" cellspacing="0" cellpadding="0" align="center">
+
+ <tr>
+ <td>Nombre:</td>
+ <td><input type="text" name="nombre" placeholder="Modifica Tu nombre"></td>
+
+ </tr>
+
+ <tr>
+ <td>Cédula: (no puede modificarse)</td>
+ <td><input type="number" name="cedula" placeholder="Ingresa tu cédula" required></td>
+ </tr>
+
+<tr>
+ <td>E-mail:</td>
+ <td><input type="email" name="correo" placeholder="Aqui@tucorreo.com"></td>
+</tr>
+
+<tr>
+ <td>Edad:</td>
+ <td><input type="number" name="edad" max="100" min="0" placeholder="Modifica tu Edad"></td>
+</tr>
+
+<tr>
+ <td>&nbsp;</td>
+ <td>
+	<input id="btnAct" type="submit" name="btnAct" value="btnAct" onclick="update()" />
+ </td>
+ </tr>
+ </tr>
+ <td>&nbsp;</td>
+ </tr>
+ </table>
+</form>
+</body>
 
 </html>

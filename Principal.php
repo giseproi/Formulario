@@ -4,7 +4,7 @@
 
 	//Conexión a la base de datos
 	$host="127.0.0.1";
-    	$port="5432";
+    $port="5432";
 	$user ="phpapache";
 	$pass="phpapache";
 	$dbname="crud";
@@ -21,12 +21,10 @@
 		echo "<table>";
 		echo "<thead>";
 		echo "<tr>";
-			echo "<th>nombre</th>";
 			echo "<th>cedula</th>";
+			echo "<th>nombre</th>";			
 			echo "<th>correo</th>";
-			echo "<th>edad</th>";
-			echo "<th>fecha</th>";
-			echo "<th>descripción</th>";
+			echo "<th>edad</th>";			
 		echo "</tr>";
 		echo "</thead>";
 		echo "<tbody>";
@@ -35,9 +33,7 @@
 		<td>".$row[0]."</td>
 		<td>".$row[1]."</td>
 		<td>".$row[2]."</td>
-		<td>".$row[3]."</td>
-		<td>".$row[4]."</td>
-		<td>".$row[5]."</td>
+		<td>".$row[3]."</td>		
 		</tr>"
 	}
 	echo "</tbody>";

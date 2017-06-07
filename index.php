@@ -80,13 +80,33 @@ pg_close($dbconn);
  <td>&nbsp;</td>
  <td><input id="boton" type="submit" name="boton" value="Guardar"></td>
  </tr>
-<tr>
- <td>&nbsp;</td>
+ </tr>
  <td>&nbsp;</td>
  </tr>
  </table>
 </form>
 
+
+
+
+<form action="borrar.php" method="post">
+
+<table>
+
+ <tr>
+ <td>Borrar Usuario:</td>
+ <td><input type="text" name="cedula" placeholder="cedula" required></td>
+ </tr>
+
+<tr>
+ <td>&nbsp;</td>
+ <td><input id="btnBorrar" type="submit" name="bntBorrar" value="Borrar Usuario"></td>
+ </tr>
+ </tr> 
+
+</table>
+
+</form>
 </body>
 
 
